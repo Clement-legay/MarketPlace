@@ -10,15 +10,18 @@ class products
    private $description;
    private $image;
    private $category;
-   private $stars;
 
-   public function __construct($id, $color, $last_updater, $updates) {
+   public function __construct($id, $name, $society, $itemsLeft, $price, $description, $image, $category)
+   {
       $this->id = $id;
-      $this->color = $color;
-      $this->last_updater = $last_updater;
-      $this->updates = $updates;
+      $this->name = $name;
+      $this->society = $society;
+      $this->itemsLeft = $itemsLeft;
+      $this->price = $price;
+      $this->description = $description;
+      $this->image = $image;
+      $this->category = $category;
    }
-
 
     /**
      * @param mixed $id
@@ -26,30 +29,6 @@ class products
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @param mixed $color
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-    }
-
-    /**
-     * @param mixed $last_updater
-     */
-    public function setLastUpdater($last_updater)
-    {
-        $this->last_updater = $last_updater;
-    }
-
-    /**
-     * @param mixed $updates
-     */
-    public function setUpdates($updates)
-    {
-        $this->updates = $updates;
     }
 
     /**
@@ -63,24 +42,112 @@ class products
     /**
      * @return mixed
      */
-    public function getColor()
+    public function getName()
     {
-        return $this->color;
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param mixed $society
+     */
+    public function setSociety($society)
+    {
+        $this->society = $society;
     }
 
     /**
      * @return mixed
      */
-    public function getLastUpdater()
+    public function getSociety()
     {
-        return $this->last_updater;
+        return $this->society;
     }
 
     /**
      * @return mixed
      */
-    public function getUpdates()
+    public function getItemsLeft()
     {
-        return $this->updates;
+        return $this->itemsLeft;
+    }
+
+    /**
+     * @param mixed $itemsLeft
+     */
+    public function setItemsLeft($itemsLeft)
+    {
+        $this->itemsLeft = $itemsLeft;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
     }
 }

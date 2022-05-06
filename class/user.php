@@ -6,13 +6,31 @@ class user
     private $username;
     private $password;
     private $email;
+    private $admin;
 
-    public function __construct($id, $username, $password, $email)
+    public function __construct($id, $username, $password, $email, $admin)
     {
         $this->id = $id;
         $this->username = $username;
         $this->password = $password;
         $this->email = $email;
+        $this->admin = $admin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAdmin()
+    {
+        return $this->admin;
+    }
+
+    /**
+     * @param mixed $admin
+     */
+    public function setAdmin($admin)
+    {
+        $this->admin = $admin;
     }
 
     /**
